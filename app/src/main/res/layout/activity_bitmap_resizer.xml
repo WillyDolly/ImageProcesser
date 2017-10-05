@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bitmap_resizer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.popland.pop.imageprocesser.BitmapResizer">
+
+    <ImageView
+        android:id="@+id/originalIV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:id="@+id/edtCao"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:hint="height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"/>
+
+    <EditText
+        android:id="@+id/edtRong"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_toLeftOf="@id/edtCao"
+        android:hint="width"/>
+
+    <Button
+        android:id="@+id/btnResize"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resize"
+        android:layout_below="@id/edtRong"
+        android:layout_alignParentRight="true"/>
+
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/originalIV">
+     <LinearLayout
+        android:id="@+id/linearLayout"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    </HorizontalScrollView>
+</RelativeLayout>
